@@ -2,8 +2,8 @@ import mysql
 import mysql.connector
 import redis
 
-connect = mysql.connector.connect(host='localhost', user='root', password='1234', port = 3306, database='example_schema')
-r = redis.Redis(host='localhost', port=6379, db=0)
+connect = mysql.connector.connect(host='base', user='root', password='1234', port = 3306, database='example_schema')
+r = redis.Redis(host='redis', port=6379, db=0)
 print("Введите Y для продолжения")
 answer=input().lower()
 create_table = """
